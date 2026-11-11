@@ -1,0 +1,272 @@
+:root {
+  --bg: #f2efe8;
+  --panel: #fffdf8;
+  --ink: #1f2a1f;
+  --muted: #6d756c;
+  --line: #d7d1c4;
+  --accent: #1b7f5b;
+  --accent-soft: #dff4eb;
+  --danger: #a73d35;
+  --shadow: 0 18px 50px rgba(35, 31, 24, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(27, 127, 91, 0.1), transparent 28%),
+    linear-gradient(180deg, #f8f5ee 0%, var(--bg) 100%);
+  color: var(--ink);
+}
+
+.shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 32px auto 56px;
+  display: grid;
+  gap: 20px;
+}
+
+.hero,
+.panel {
+  background: rgba(255, 253, 248, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.lede,
+.panel-head p,
+.bench-top p,
+.empty,
+.selection-note {
+  color: var(--muted);
+}
+
+.status-card {
+  background: linear-gradient(135deg, #1b7f5b, #124b40);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  align-self: stretch;
+}
+
+.status-label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.72;
+  margin-bottom: 8px;
+}
+
+.error {
+  color: #ffd9d6;
+  margin-bottom: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  background: rgba(255, 253, 248, 0.75);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
+.tab-button.active {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+.tab-panel {
+  display: grid;
+  gap: 20px;
+}
+
+.panel {
+  padding: 24px;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.form-grid .wide {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+textarea {
+  min-height: 86px;
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.bench-list {
+  display: grid;
+  gap: 12px;
+}
+
+.operations-grid {
+  align-items: start;
+}
+
+.bench-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  background: #fff;
+}
+
+.bench-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+}
+
+.bench-top p {
+  margin: 6px 0 0;
+  font-size: 13px;
+}
+
+.pill {
+  white-space: nowrap;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+ul {
+  margin: 14px 0 0;
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.site-chip {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  border-radius: 14px;
+  background: #f6f4ed;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.site-chip.active {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+
+.create-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(241, 251, 246, 0.9));
+}
+
+.selection-note {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #f8fbf8;
+  border: 1px dashed var(--line);
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

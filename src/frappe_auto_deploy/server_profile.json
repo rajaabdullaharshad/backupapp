@@ -1,0 +1,12 @@
+{
+  "remote": true,
+  "access_mode": "user",
+  "server_ip": "146.190.112.42",
+  "ssh_port": 1,
+  "ssh_user": "nextash",
+  "ssh_password": "NexTash.123!",
+  "sudo_password": "NexTash.123!",
+  "create_user": false,
+  "new_username": "",
+  "new_password": ""
+}
